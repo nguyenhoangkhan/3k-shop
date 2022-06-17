@@ -1,0 +1,483 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+}
+.active {
+  display: flex !important;
+}
+.selected {
+  background-color: white !important;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.header {
+  position: sticky;
+  background-color: #000000;
+  height: 100px;
+  top: 0;
+  z-index: 999;
+}
+.content-header {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  cursor: pointer;
+}
+.content-menu {
+  display: flex;
+  align-items: center;
+}
+.menu-items {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.menu-item {
+  color: white;
+
+  cursor: pointer;
+  padding: 41px 20px;
+}
+.menu-item > a {
+  position: relative;
+}
+.menu-item a::before {
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  content: "";
+}
+.menu-item > a:hover::before {
+  width: 100%;
+}
+.right-items {
+  width: 480px;
+  display: flex;
+  justify-content: flex-end;
+}
+.right-items .search-icon {
+  width: 13px;
+}
+.right-items .cart-icon {
+  width: 20px;
+}
+
+.right-item {
+  cursor: pointer;
+  margin-left: 30px;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.right-items button:first-child {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  font-weight: 300;
+}
+.search:hover {
+  box-shadow: 0 5px 35px rgb(255 255 255 / 50%);
+  transform: scale(1.1);
+}
+.right-items button:nth-child(2) {
+  width: 34px;
+  height: 34px;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  font-weight: 300;
+}
+.right-items button:last-child {
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  font-weight: 300;
+}
+.cart:hover {
+  box-shadow: 0 5px 35px rgb(255 255 255 / 50%);
+  transform: scale(1.1);
+}
+.right-items a {
+  margin-right: 30px;
+}
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding: 30px 20px;
+  margin: 0 auto;
+  background-color: white;
+  animation: slideUp ease 0.2s;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.san-pham:hover .sub-menu {
+  display: flex;
+}
+.sub-menu-sidebar {
+  background-color: #f1f1f1;
+  width: 305px;
+}
+.sidebar-item {
+  padding: 25px 0 25px 23px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.sidebar-item:hover {
+  background-color: black;
+}
+.sidebar-item:hover a {
+  color: white;
+}
+.sidebar-item:hover img {
+  filter: invert(1);
+}
+.sidebar-item a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+}
+.sidebar-item .icon {
+  width: 20px;
+  margin-right: 20px;
+}
+.sub-menu-content-item {
+  display: none;
+}
+.content {
+  margin-left: 30px;
+}
+.content-list-item a {
+  position: relative;
+}
+.content-list-item a::after {
+  width: 0;
+  position: absolute;
+  z-index: 0;
+  bottom: -5px;
+  left: 0;
+  height: 1px;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+  content: "";
+}
+.content-list-item a:hover:after {
+  width: 100%;
+}
+.content-list-item:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.sub-menu-content .title {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid black;
+  width: 305px;
+  padding-bottom: 5px;
+  margin-bottom: 18px;
+  color: black;
+  opacity: 1;
+}
+.sub-menu-content a {
+  color: #000;
+  opacity: 0.5;
+  font-size: 18px;
+  line-height: 185%;
+}
+.sub-menu-ad {
+  height: 380px;
+  margin-left: 40px;
+}
+.sub-menu-ad img {
+  width: 100%;
+  height: 100%;
+}
+.brands-menu {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.thuong-hieu:hover .brands-menu {
+  display: flex;
+}
+.brands {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.brand {
+  width: 240px;
+  height: 90px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  transition: all 0.1s ease;
+}
+.brand:hover {
+  transform: scale(1.02);
+}
+.thuong-hieu-footer {
+  margin: 5px 0;
+  text-align: center;
+}
+.thuong-hieu-footer a {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: solid 1px black;
+  background-color: black;
+  color: white;
+}
+.thuong-hieu-footer a:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+.slick-arrow {
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+.slick-prev {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+}
+.slick-next {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+.slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slick-dots button {
+  margin: 0 5px;
+  font-size: 0;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.slick-dots .slick-active button {
+  background-color: white;
+}
+.news-content {
+  margin-top: 50px;
+}
+.news-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 65px;
+}
+.news-title h1 {
+  z-index: 1;
+  background-color: white;
+  padding-right: 10px;
+}
+.news-title a {
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-weight: bold;
+  color: black;
+  z-index: 1;
+  background-color: white;
+}
+.news-title a:hover {
+  color: white;
+  background-color: black;
+}
+.news-title:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.main-video {
+  border-radius: 5px;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+.playlist {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 370px;
+  background-color: #030303;
+}
+.playlist-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: inherit;
+  padding: 14px 24px;
+
+  cursor: pointer;
+}
+.playlist-img {
+  flex: 0 0 180px;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.playlist-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: #ccc;
+  line-height: 25px;
+}
+.playlist-content .title {
+  color: white;
+}
+.playlist-content .meta {
+  font-size: 14px;
+}
+.main-infor {
+  margin-bottom: 90px;
+}
+.infor-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  border-radius: 5px;
+  height: 100%;
+  position: relative;
+}
+.infor-content .img {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 20px;
+}
+.infor-content a {
+  padding: 5px 15px 35px 15px;
+  color: black;
+}
+.infor-content .social {
+  justify-self: flex-end;
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+}
+.infor-content .social a {
+  color: #4460a0;
+  font-size: 25px;
+}
+.month-products {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #191919;
+  overflow: hidden;
+}
+.month-products .title {
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  font-size: 18px;
+  background-color: #303030;
+}
+.products {
+  padding: 25px 20px;
+}
+.product {
+  display: flex;
+  align-items: center;
+  color: white;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+.product-content {
+  width: 100%;
+}
+.product .product-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.view-bar {
+  width: 100%;
+  height: 3px;
+  background-color: #f8d858;
+  border-radius: 1px;
+}
+.product-name a {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+.product .counter-view {
+  font-size: 12px;
+}
+.news-img {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.new-products {
+  padding: 50px 0;
+}
