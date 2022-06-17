@@ -26,7 +26,6 @@ img {
   width: 100%;
   height: 100%;
   object-position: center;
-  object-fit: cover;
   vertical-align: middle;
 }
 
@@ -85,9 +84,11 @@ img {
 }
 .right-items .search-icon {
   width: 13px;
+  height: 13px;
 }
 .right-items .cart-icon {
   width: 20px;
+  height: 20px;
 }
 
 .right-item {
@@ -258,6 +259,9 @@ img {
   margin-bottom: 30px;
   transition: all 0.1s ease;
 }
+.brand img {
+  object-fit: contain;
+}
 .brand:hover {
   transform: scale(1.02);
 }
@@ -352,7 +356,7 @@ img {
   width: 100%;
   height: 1px;
   background-color: black;
-  position: absolute;
+position: absolute;
   left: 0;
   top: 50%;
 }
@@ -480,4 +484,51 @@ img {
 }
 .new-products {
   padding: 50px 0;
+}
+.left-product-item {
+  width: 650px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+.left-product-item .img {
+  background-image: url(https://3kshop.vn/wp-content/uploads/fly-images/27016/tai-nghe-sony-wh-1000xm4-6-450x450-c.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  background-position: center center;
+}
+.left-product-item .overlay-content {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  font-size: 20px;
+  color: #fff;
+  z-index: 1000;
+}
+.left-product-item .overlay-content .product-title {
+  margin-bottom: 15px;
+}
+.left-product-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.473958) 49.26%,
+rgba(0, 0, 0, 0) 71.12%
+  );
+  color: #fff;
+  cursor: pointer;
+}
+
+.left-product-item .overlay:hover + .img {
+  transform: scale(1.2);
 }
