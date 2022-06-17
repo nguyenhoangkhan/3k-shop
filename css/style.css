@@ -532,3 +532,69 @@ rgba(0, 0, 0, 0) 71.12%
 .left-product-item .overlay:hover + .img {
   transform: scale(1.2);
 }
+.box{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 350px;
+  border-radius:8px ;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.box:hover{
+  background: #fff;
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 20%);
+}
+.box-name{
+  margin-top: 15px;
+}
+.box-price{
+  width: fit-content;
+  min-width: 115px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+  margin-top: 30px;
+  padding: 2px 5px;
+  
+}
+.box-content{
+  padding:0 20px;
+}
+.see-more{
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+.see-more__content{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.see-more__arrow{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+  background-color: #f8d858;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.see-more__arrow:hover{
+  width: 43px;
+  height: 43px;
+}
