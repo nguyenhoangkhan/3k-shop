@@ -34,7 +34,7 @@ img {
   background-color: #000000;
   height: 100px;
   top: 0;
-  z-index: 999;
+  z-index: 999999;
 }
 .content-header {
   margin: 0 auto;
@@ -356,7 +356,7 @@ img {
   width: 100%;
   height: 1px;
   background-color: black;
-position: absolute;
+  position: absolute;
   left: 0;
   top: 50%;
 }
@@ -523,7 +523,7 @@ position: absolute;
     90deg,
     #000000 0%,
     rgba(0, 0, 0, 0.473958) 49.26%,
-rgba(0, 0, 0, 0) 71.12%
+    rgba(0, 0, 0, 0) 71.12%
   );
   color: #fff;
   cursor: pointer;
@@ -532,23 +532,23 @@ rgba(0, 0, 0, 0) 71.12%
 .left-product-item .overlay:hover + .img {
   transform: scale(1.2);
 }
-.box{
+.box {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   height: 350px;
-  border-radius:8px ;
+  border-radius: 8px;
   transition: 0.2s ease;
   cursor: pointer;
 }
-.box:hover{
+.box:hover {
   background: #fff;
   box-shadow: 0px 0px 20px rgb(0 0 0 / 20%);
 }
-.box-name{
+.box-name {
   margin-top: 15px;
 }
-.box-price{
+.box-price {
   width: fit-content;
   min-width: 115px;
   background-color: black;
@@ -557,17 +557,16 @@ rgba(0, 0, 0, 0) 71.12%
   border-radius: 2px;
   margin-top: 30px;
   padding: 2px 5px;
-  
 }
-.box-content{
-  padding:0 20px;
+.box-content {
+  padding: 0 20px;
 }
-.see-more{
+.see-more {
   position: relative;
   width: fit-content;
   cursor: pointer;
 }
-.see-more__content{
+.see-more__content {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -579,11 +578,11 @@ rgba(0, 0, 0, 0) 71.12%
   text-align: center;
   padding: 0 20px;
 }
-.see-more__arrow{
+.see-more__arrow {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -15px;
+  bottom: -22px;
   background-color: #f8d858;
   height: 40px;
   width: 40px;
@@ -594,7 +593,7 @@ rgba(0, 0, 0, 0) 71.12%
   text-align: center;
   transition: 0.3s ease;
 }
-.see-more__arrow:hover{
+.see-more__arrow:hover {
   width: 43px;
   height: 43px;
 }
