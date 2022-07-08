@@ -31,7 +31,7 @@ img {
 
 .header {
   position: sticky;
-  background-color: #000000;
+  background-color: #191919;
   height: 100px;
   top: 0;
   z-index: 999999;
@@ -103,11 +103,11 @@ img {
   height: 32px;
   background-color: white;
   border-radius: 50%;
-  color: black;
+  color: #191919;
   font-weight: 300;
 }
 .search:hover {
-  box-shadow: 0 5px 35px rgb(255 255 255 / 50%);
+  box-shadow: 0 20px 35px rgb(255 255 255 / 50%);
   transform: scale(1.1);
 }
 .right-items button:nth-child(2) {
@@ -115,7 +115,7 @@ img {
   height: 34px;
   background-color: white;
   border-radius: 50%;
-  color: black;
+  color: #191919;
   font-weight: 300;
 }
 .right-items button:last-child {
@@ -123,7 +123,7 @@ img {
   height: 44px;
   background-color: white;
   border-radius: 50%;
-  color: black;
+  color: #191919;
   font-weight: 300;
 }
 .cart:hover {
@@ -168,7 +168,7 @@ img {
   transition: 0.2s all;
 }
 .sidebar-item:hover {
-  background-color: black;
+  background-color: #191919;
 }
 .sidebar-item:hover a {
   color: white;
@@ -180,7 +180,7 @@ img {
   display: flex;
   align-items: center;
   font-weight: bold;
-  color: black;
+  color: #191919;
   font-size: 18px;
 }
 .sidebar-item .icon {
@@ -217,11 +217,11 @@ img {
 .sub-menu-content .title {
   font-weight: bold;
   font-size: 18px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #191919;
   width: 305px;
   padding-bottom: 5px;
   margin-bottom: 18px;
-  color: black;
+  color: #191919;
   opacity: 1;
 }
 .sub-menu-content a {
@@ -273,13 +273,13 @@ img {
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
-  border: solid 1px black;
-  background-color: black;
+  border: solid 1px #191919;
+  background-color: #191919;
   color: white;
 }
 .thuong-hieu-footer a:hover {
   background-color: white;
-  color: black;
+  color: #191919;
   transition: all 0.3s ease;
 }
 .slick-arrow {
@@ -340,22 +340,22 @@ img {
 }
 .news-title a {
   padding: 5px 10px;
-  border: 2px solid black;
+  border: 2px solid #191919;
   border-radius: 6px;
   font-weight: bold;
-  color: black;
+  color: #191919;
   z-index: 1;
   background-color: white;
 }
 .news-title a:hover {
   color: white;
-  background-color: black;
+  background-color: #191919;
 }
 .news-title:before {
   content: "";
   width: 100%;
   height: 1px;
-  background-color: black;
+  background-color: #191919;
   position: absolute;
   left: 0;
   top: 50%;
@@ -419,7 +419,7 @@ img {
 }
 .infor-content a {
   padding: 5px 15px 35px 15px;
-  color: black;
+  color: #191919;
 }
 .infor-content .social {
   justify-self: flex-end;
@@ -551,7 +551,7 @@ img {
 .box-price {
   width: fit-content;
   min-width: 115px;
-  background-color: black;
+  background-color: #191919;
   color: white;
   font-weight: bold;
   border-radius: 2px;
@@ -565,6 +565,7 @@ img {
   position: relative;
   width: fit-content;
   cursor: pointer;
+  margin: 0 auto;
 }
 .see-more__content {
   width: 120px;
@@ -599,4 +600,136 @@ img {
 }
 .align-center {
   align-items: center;
+}
+.analog-image {
+  max-height: 240px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.analog-image img {
+  object-fit: cover;
+  object-position: center;
+}
+.box-new {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.box-new-image {
+  flex: 0 0 320px;
+  height: 200px;
+}
+.box-new-image img {
+  object-fit: cover;
+  object-position: center;
+}
+.box-new-content {
+  padding: 20px 25px;
+  background-color: #f4f4f4;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.box-new-content-info {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: capitalize;
+  color: #000;
+  opacity: 0.7;
+  max-height: 39.2px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.box-new-content-more {
+  padding: 5px 8px;
+  border: 1px solid #191919;
+  border-radius: 16px;
+  z-index: 1;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.box-new-content-more:hover {
+  background-color: #191919;
+  color: white;
+}
+/* footer */
+.footer {
+  background-color: #191919;
+  color: white;
+  padding: 50px 100px 100px 100px;
+}
+.footer h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer a {
+  color: #a0a0a0;
+  font-weight: 520;
+  cursor: pointer;
+  position: relative;
+}
+.footer li {
+  margin: 12px 0;
+  color: #a0a0a0;
+  font-size: 16.5px;
+}
+.footer-logo {
+  width: 200px;
+  height: 50px;
+}
+.footer-logo {
+  margin: 0 auto;
+}
+.footer-intro-auth {
+  width: 155px;
+  height: 60px;
+  margin: 30px 0 20px 0;
+  cursor: pointer;
+}
+.footer-intro-social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-intro-social a {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  color: #191919;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+.footer-intro-social a:hover {
+  box-shadow: 0 5px 35px rgb(255 255 255 / 50%);
+  transform: scale(1.1);
+}
+.footer-intro-social a:nth-child(2),
+.footer-intro-social a:nth-child(3) {
+  margin-left: 20px;
+}
+.footer a::after {
+  content: "";
+  width: 0px;
+  position: absolute;
+  z-index: 0;
+  bottom: -2px;
+  left: 0;
+  height: 1px;
+  background-color: #a0a0a0;
+  transition: all 0.3s ease-in-out;
+}
+.footer a:hover::after {
+  width: 100%;
 }
