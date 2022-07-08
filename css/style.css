@@ -30,11 +30,13 @@ img {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   background-color: #191919;
   height: 100px;
   top: 0;
   z-index: 999999;
+  left: 0;
+  right: 0;
 }
 .content-header {
   margin: 0 auto;
@@ -323,6 +325,9 @@ img {
 .slick-dots .slick-active button {
   background-color: white;
 }
+.banner {
+  margin-top: 100px;
+}
 .news-content {
   margin-top: 50px;
 }
@@ -364,6 +369,9 @@ img {
   border-radius: 5px;
   margin-bottom: 28px;
   overflow: hidden;
+}
+.video-news-container {
+  background-color: black;
 }
 .playlist {
   overflow-y: scroll;
